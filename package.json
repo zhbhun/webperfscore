@@ -1,0 +1,40 @@
+{
+  "name": "webperfscore",
+  "version": "0.0.1",
+  "description": "web performance score calculator",
+  "engines": {
+    "node": ">= 10"
+  },
+  "license": "Apache-2.0",
+  "author": "zhbhun <github@zhbhun.info>",
+  "main": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf coverage lib tmp",
+    "build": "rimraf lib && tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "~25.2.1",
+    "@types/node": "~12.12.38",
+    "@typescript-eslint/eslint-plugin": "~2.32.0",
+    "@typescript-eslint/parser": "~2.32.0",
+    "eslint": "~7.0.0",
+    "eslint-config-prettier": "~6.11.0",
+    "eslint-plugin-jest": "~23.10.0",
+    "jest": "~25.2.7",
+    "prettier": "~2.0.5",
+    "rimraf": "~3.0.2",
+    "ts-jest": "~25.5.1",
+    "tsutils": "~3.17.0",
+    "typescript": "~3.8.3"
+  },
+  "dependencies": {
+    "number-precision": "^1.4.0"
+  }
+}
